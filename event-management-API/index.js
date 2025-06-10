@@ -372,24 +372,24 @@ app.post('/signup', async (req, res) => {
 app.post('/login', async (req, res) => {
   const { user_name, password } = req.body;
 
-  // Check agar koi field empty hai
+  
   if (!user_name || !password) {
     return res.status(400).json({ success: false, message: 'Please fill out all fields.' });
   }
 
   try {
-    // Query database to find user with matching username and password
+    
     const result = await pool.query(
       'SELECT * FROM users WHERE user_name = $1 AND password = $2',
       [user_name, password]
     );
 
     if (result.rows.length === 0) {
-      // User nahi mila ya password galat hai
+     
       return res.status(401).json({ success: false, message: 'Username or password is incorrect.' });
     }
 
-    // User mila, login success
+   
     return res.status(200).json({ success: true, message: 'Login successful' });
   } catch (error) {
     console.error('Error during login:', error);
@@ -397,7 +397,7 @@ app.post('/login', async (req, res) => {
   }
 });
 
-// Admin login route
+
 app.post('/admin_login', async (req, res) => {
   const { user_name, password } = req.body;
 
@@ -406,17 +406,17 @@ app.post('/admin_login', async (req, res) => {
   }
 
   try {
-    // Query database to find user with matching username and password
+    
     const result = await pool.query(
       'SELECT * FROM users WHERE user_name = $1 AND password = $2 AND role = $3',
       [user_name, password , 'admin']
     );
      if (result.rows.length === 0) {
-      // User nahi mila ya password galat hai
+      
       return res.status(401).json({ success: false, message: 'Username or password is incorrect or not an admin' });
     }
 
-    // User mila, login success
+   
     return res.status(200).json({ success: true, message: 'Login successful' });
   } catch (error) {
     console.error('Error during login:', error);
@@ -551,7 +551,7 @@ app.get('/Tusers', async (req, res) => {
 });
 
 
-// events by category
+
 app.get('/events-by-category', async (req, res) => {
   try {
     const result = await pool.query(`
@@ -568,7 +568,7 @@ app.get('/events-by-category', async (req, res) => {
   }
 });
 
-// payment methods
+git 
 app.get('/payment-methods', async (req, res) => {
   try {
     const result = await pool.query(`
