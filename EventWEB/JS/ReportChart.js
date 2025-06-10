@@ -1,6 +1,6 @@
 const baseURL = 'https://opulent-computing-machine-jj9v77xj967q37gv-6007.app.github.dev';
 
-// Fetch Events by Category and create bar chart
+
 fetch(`${baseURL}/events-by-category`)
   .then(res => res.json())
   .then(data => {
@@ -32,7 +32,7 @@ fetch(`${baseURL}/events-by-category`)
   })
   .catch(err => console.error('Error loading events by category:', err));
 
-// Fetch Payment Methods and create pie chart
+
 fetch(`${baseURL}/payment-methods`)
   .then(res => res.json())
   .then(data => {
@@ -60,7 +60,7 @@ fetch(`${baseURL}/payment-methods`)
   })
   .catch(err => console.error('Error loading payment methods:', err));
 
- // Fetch registration status
+
 fetch(`${baseURL}/registration-status`)
   .then(res => res.json())
   .then(data => {
@@ -75,7 +75,7 @@ fetch(`${baseURL}/registration-status`)
         datasets: [{
           label: 'Registration Status',
           data: counts,
-          backgroundColor: ['#28a745', '#dc3545'] // Green for paid, red for unpaid
+          backgroundColor: ['#28a745', '#dc3545'] 
         }]
       },
       options: {
@@ -90,7 +90,7 @@ fetch(`${baseURL}/registration-status`)
   .catch(err => console.error('Error loading registration status:', err));
 
 
-// Fetch Feedback ratings
+
 fetch(`${baseURL}/feedback-ratings`)
   .then(res => res.json())
   .then(data => {

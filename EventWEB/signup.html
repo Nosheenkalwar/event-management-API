@@ -12,9 +12,7 @@
   />
 
   <style>
-    /* ------------------------------------
-       GLOBAL RESET AND BODY STYLING
-       ------------------------------------ */
+    
     * {
       margin: 0;
       padding: 0;
@@ -26,7 +24,7 @@
       font-family: Arial, sans-serif;
       background-color: #f0fdfa;
       color: #4b5563;
-      overflow: hidden; /* Prevent scrollbars since video is absolute */
+      overflow: hidden; 
     }
 
     body {
@@ -35,25 +33,19 @@
       align-items: center;
     }
 
-    /* ------------------------------------
-       CONTAINER THAT HOLDS BOTH VIDEO & FORM
-       ------------------------------------ */
     .signup-wrapper {
       display: flex;
-      align-items: stretch;          /* Make both children the same height */
+      align-items: stretch;         
       background: transparent;
       border-radius: 15px;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      max-width: 900px;              /* Adjust total width here */
+      max-width: 900px;              
       width: 100%;
     }
 
-    /* ------------------------------------
-       LEFT SIDE: VIDEO BACKGROUND
-       ------------------------------------ */
     .video-container {
-      flex: 1;                       /* Take up all leftover space */
+      flex: 1;                      
       position: relative;
       overflow: hidden;
     }
@@ -61,18 +53,15 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 200%;                   /* Oversize so scale(0.5) zooms out */
+      width: 200%;                   
       height: 200%;
       object-fit: cover;
-      transform: translate(-50%, -50%) scale(0.5); /* Center + zoom out */
+      transform: translate(-50%, -50%) scale(0.5); 
       transform-origin: center center;
     }
 
-    /* ------------------------------------
-       RIGHT SIDE: SIGNUP FORM
-       ------------------------------------ */
     .form-container {
-      flex: 0 0 400px;               /* Fixed 400px width for the form */
+      flex: 0 0 400px;              
       background-color: #ffffff;
       padding: 2.5rem 2rem 2rem 2rem;
       border-top-right-radius: 15px;
@@ -125,16 +114,13 @@
       text-decoration: underline;
     }
 
-    /* ------------------------------------
-       RESPONSIVE: HIDE VIDEO ON SMALL SCREENS
-       ------------------------------------ */
     @media (max-width: 768px) {
       .signup-wrapper {
         flex-direction: column;
         max-width: 100%;
       }
       .video-container {
-        display: none;              /* Hide video on smaller devices */
+        display: none;             
       }
       .form-container {
         flex: none;

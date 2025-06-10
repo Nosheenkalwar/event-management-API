@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function loadVenues() {
     try {
-      const res = await fetch(apiBaseURL + '/venues'); // Add GET /venues backend route if missing
+      const res = await fetch(apiBaseURL + '/venues');
       if (!res.ok) throw new Error('Failed to fetch venues');
       const venues = await res.json();
 

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const apiBaseURL = 'https://opulent-computing-machine-jj9v77xj967q37gv-6007.app.github.dev';
 
-  // Fetch and render attendees on page load
+ 
   async function loadAttendees() {
     try {
       const res = await fetch(apiBaseURL + '/attendees');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Show modal on Add button click
+ 
   const addBtn = document.getElementById('btnAdd');
   const addModal = new bootstrap.Modal(document.getElementById('addAttendeeModal'));
 
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addModal.show();
   });
 
-  // Handle form submission to add attendee
+  
   document.getElementById('attendeeForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (res.ok) {
         const newAttendee = await res.json();
         statusDiv.innerHTML = `<span class="text-success">✅ Attendee ${newAttendee.full_name} added successfully!</span>`;
-        loadAttendees();   // Reload attendees list to include the new one
+        loadAttendees();   
         this.reset();
         setTimeout(() => {
           addModal.hide();
@@ -68,6 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Initial load
+
   loadAttendees();
 });

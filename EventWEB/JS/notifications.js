@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const apiBaseURL = 'https://opulent-computing-machine-jj9v77xj967q37gv-6007.app.github.dev';
 
-  // Load all notifications into the table
   async function loadNotifications() {
     try {
       const res = await fetch(`${apiBaseURL}/notifications`);
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Show modal for adding notification
   const addBtn = document.getElementById('btnAdd');
   const addModal = new bootstrap.Modal(document.getElementById('addnotificationModal'));
   const form = document.getElementById('notificationForm');
@@ -38,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addModal.show();
   });
 
-  // Handle form submission
+  
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
