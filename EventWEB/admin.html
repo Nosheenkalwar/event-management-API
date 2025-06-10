@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Admin Panel</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background-color: #f0fdfa;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            background-color: #fff;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            border-right: 1px solid #ccc;
+        }
+
+        .sidebar h2 {
+            font-weight: bold;
+            color: #050505;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .sidebar .btn-custom {
+            background-color: #2cb1a5;
+            color: white;
+            border: none;
+            margin-bottom: 0.75rem;
+            width: 100%;
+        }
+
+        .sidebar .btn-custom:hover {
+            background-color: #25a099;
+        }
+
+        .back-link {
+            margin-top: 2rem;
+            display: block;
+            text-align: center;
+            color: #0b0b0b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .center-image-wrapper {
+  position: fixed;         /* Stays centered even if page scrolls */
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;           /* Stay above other elements */
+}
+
+.center-image-wrapper img {
+  width: 300px;             /* Choti si image */
+  height: auto;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Left Sidebar -->
+        <div class="col-md-3 sidebar">
+            <h2>Admin Panel</h2>
+
+            <a href="add_events.html" class="btn btn-custom">View/Add Events</a>
+            <a href="add_venues.html" class="btn btn-custom">View/Add Venues</a>
+            <a href="organizers.html" class="btn btn-custom">View/Add Organizers</a>
+            <a href="event_categories.html" class="btn btn-custom">View/Add Categories</a>
+            <a href="add_schedules.html" class="btn btn-custom">View/Add Schedules</a>
+            <a href="staff.html" class="btn btn-custom">View/Add Staff</a>
+            <a href="add_feedback.html" class="btn btn-custom">View/Add Feedback</a>
+             <a href="Notifications.html" class="btn btn-custom">View/Add Notification</a>
+              <a href="registrations.html" class="btn btn-custom">View/Add Registration</a>
+               <a href="payments.html" class="btn btn-custom">View/Add Payment</a>
+                <a href="attendees.html" class="btn btn-custom">View/Add Attendee</a>
+                <a href="add_ticket.html" class="btn btn-custom">View/Add Ticket</a>
+            <a href="sponsor.html" class="btn btn-custom">View/Add Sponsors</a>
+            <a href="view_users.html" class="btn btn-custom">View Users</a>
+            <a href="report.html" class="btn btn-custom">View Report</a>
+            <a href="ReportChart.html" class="btn btn-custom">Visual Report</a>
+            <a href="dashboard.html" class="back-link">Logout</a>
+        </div>
+
+        <!-- Right Content Area (Empty) -->
+        <div class="col-md-9"></div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<div class="center-image-wrapper">
+  <img src="images/admin_panel.jpeg" alt="Center Image" />
+</div>
+</body>
+</html>

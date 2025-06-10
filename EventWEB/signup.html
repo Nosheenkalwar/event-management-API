@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* ------------------------------------
+       GLOBAL RESET AND BODY STYLING
+       ------------------------------------ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #f0fdfa;
+      color: #4b5563;
+      overflow: hidden; /* Prevent scrollbars since video is absolute */
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* ------------------------------------
+       CONTAINER THAT HOLDS BOTH VIDEO & FORM
+       ------------------------------------ */
+    .signup-wrapper {
+      display: flex;
+      align-items: stretch;          /* Make both children the same height */
+      background: transparent;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 900px;              /* Adjust total width here */
+      width: 100%;
+    }
+
+    /* ------------------------------------
+       LEFT SIDE: VIDEO BACKGROUND
+       ------------------------------------ */
+    .video-container {
+      flex: 1;                       /* Take up all leftover space */
+      position: relative;
+      overflow: hidden;
+    }
+    .video-container video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200%;                   /* Oversize so scale(0.5) zooms out */
+      height: 200%;
+      object-fit: cover;
+      transform: translate(-50%, -50%) scale(0.5); /* Center + zoom out */
+      transform-origin: center center;
+    }
+
+    /* ------------------------------------
+       RIGHT SIDE: SIGNUP FORM
+       ------------------------------------ */
+    .form-container {
+      flex: 0 0 400px;               /* Fixed 400px width for the form */
+      background-color: #ffffff;
+      padding: 2.5rem 2rem 2rem 2rem;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      z-index: 1;
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #111827;
+      font-weight: bold;
+    }
+    .form-container label {
+      color: #4b5563;
+      font-weight: 600;
+    }
+    #signupError {
+      color: red;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    #signupSuccess {
+      color: green;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .btn-primary {
+      background-color: #2cb1a5;
+      border-color: #2cb1a5;
+      font-weight: 600;
+      width: 100%;
+      padding: 0.5rem 0;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #4fd1c5;
+      border-color: #4fd1c5;
+    }
+    .form-container p.mt-3 {
+      text-align: center;
+      color: #4b5563;
+    }
+    .form-container p.mt-3 a {
+      color: #2cb1a5;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .form-container p.mt-3 a:hover {
+      color: #4fd1c5;
+      text-decoration: underline;
+    }
+
+    /* ------------------------------------
+       RESPONSIVE: HIDE VIDEO ON SMALL SCREENS
+       ------------------------------------ */
+    @media (max-width: 768px) {
+      .signup-wrapper {
+        flex-direction: column;
+        max-width: 100%;
+      }
+      .video-container {
+        display: none;              /* Hide video on smaller devices */
+      }
+      .form-container {
+        flex: none;
+        width: 100%;
+        border-radius: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="signup-wrapper">
+    <!-- LEFT: Video Container -->
+    <div class="video-container">
+       
+      <video autoplay muted loop>
+        <source src="images/screen.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- RIGHT: Signup Form -->
+    <div class="form-container">
+      <h2>Sign Up</h2>
+
+      <div id="signupError"></div>
+      <div id="signupSuccess"></div>
+
+      <form id="signupForm">
+        <div class="mb-3">
+          <label for="user_name">Username</label>
+          <input
+            type="text"
+            id="user_name"
+            class="form-control"
+            placeholder="Enter username"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            placeholder="Enter password"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label for="role">Role</label>
+          <select id="role" class="form-control" required>
+            <option value="reception">Reception</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+
+      <p class="mt-3">
+        Already have an account? <a href="login.html">Log in</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Your existing signup logic -->
+  <script src="JS/signup.js"></script>
+</body>
+</html>

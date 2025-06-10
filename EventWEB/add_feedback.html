@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Feedback</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f0fdfa;
+      color: #4b5563;
+      font-family: Arial, sans-serif;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #111827;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    th {
+      background-color: #e0f7f5;
+      color: #0f766e;
+    }
+    .btn-teal {
+      background-color: #2cb1a5;
+      border-color: #2cb1a5;
+      color: white;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    .btn-teal:hover {
+      background-color: #4fd1c5;
+      border-color: #4fd1c5;
+    }
+    .modal-header {
+      background-color: #2cb1a5;
+      color: white;
+    }
+    .modal-footer .btn-success {
+      background-color: #2cb1a5;
+      border-color: #2cb1a5;
+      font-weight: 600;
+    }
+    .modal-footer .btn-success:hover {
+      background-color: #4fd1c5;
+      border-color: #4fd1c5;
+    }
+    label {
+      color: #4b5563;
+      font-weight: 600;
+    }
+    #statusMessage {
+      color: #2cb1a5;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Feedback</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle" id="feedbackTable">
+        <thead>
+          <tr>
+            <th>Feedback ID</th>
+            <th>Attendee ID</th>
+            <th>Event ID</th>
+            <th>Rating</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-teal mt-3" id="btnAddFeedback">Add Feedback</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addfeedbackModal" tabindex="-1" aria-labelledby="addfeedbackModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form id="feedbackForm">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addfeedbackModalLabel">Add Feedback</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="attendee_id" class="form-label">Attendee ID</label>
+                <input type="text" id="attendee_id" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label for="event_id" class="form-label">Event ID</label>
+                <input type="text" id="event_id" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label for="rating" class="form-label">Rating (1-5)</label>
+                <input type="number" id="rating" class="form-control" min="1" max="5" required />
+              </div>
+              <div class="mb-3">
+                <label for="comments" class="form-label">Comments</label>
+                <textarea id="comments" class="form-control" rows="3"></textarea>
+              </div>
+              <div id="statusMessage" class="text-center mt-2"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-success">Submit</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="JS/add_feedback.js"></script>
+</body>
+</html>

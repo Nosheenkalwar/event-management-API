@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Event Management System</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSRgGAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <style>
+    :root {
+      
+      --container-width: 700px;
+      --container-height: 350px;
+    }
+
+    body {
+      background-color: #f0fdfa;
+      color: #4b5563;
+      font-family: Arial, sans-serif;
+      padding-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .main-container {
+      background-color: #ffffff;
+      padding: 2rem 2rem 3rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      width: var(--container-width);
+      height: var(--container-height);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+    }
+
+    h1 {
+      color: #111827;
+      font-weight: bold;
+      margin-bottom: 2.5rem;
+      font-size: 1.75rem;
+    }
+
+    .button-section {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      flex-grow: 1; /* Buttons section takes available space */
+    }
+
+    .button-box {
+      text-align: center;
+      flex: 1 1 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .button-box video {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-teal {
+      background-color: #2cb1a5;
+      border-color: #2cb1a5;
+      color: #ffffff;
+      font-weight: 600;
+      margin-top: 1rem;
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.375rem;
+      min-width: 120px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-teal:hover,
+    .btn-teal:focus {
+      background-color: #4fd1c5;
+      border-color: #4fd1c5;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .logout-container {
+      margin-top: 30px;
+      text-align: center;
+      width: var(--container-width);
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    a {
+      text-decoration: none;
+    }
+
+    @media (max-width: 480px) {
+      .button-section {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .button-box {
+        flex: none;
+      }
+    }
+    .bottom-left-image {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 200px; /* adjust size */
+  height: -1000;
+  z-index: 999;
+}
+
+.bottom-left-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* optional rounded corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* optional */
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="main-container">
+    <h1>Welcome to Event Management System</h1>
+
+    <div class="button-section">
+
+      <div class="button-box">
+        <video autoplay muted loop playsinline>
+          <source src="images/recepionist.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <a href="reception_login.html" class="btn btn-teal">Reception</a>
+      </div>
+
+      <div class="button-box">
+        <video autoplay muted loop playsinline>
+          <source src="images/admin.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <a href="admin_login.html" class="btn btn-teal">Admin</a>
+      </div>
+
+    </div>
+     </div>
+    <div class="logout-container">
+      <a href="logout.html" class="btn btn-teal">Logout</a>
+    </div>
+  
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+    <div class="bottom-left-image">
+  <img src="images/dash.jpeg" alt="Dashboard" />
+</div>
+
+</body>
+
+</html>

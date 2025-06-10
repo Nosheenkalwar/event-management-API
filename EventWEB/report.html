@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Report</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f0fdfa;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .count-card {
+            background: #e9f7f5;
+            border-radius: 8px;
+            padding: 1.5rem 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .count-card h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .count-card p {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d7a7a;
+            margin: 0;
+        }
+
+        .bottom-image-wrapper {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .bottom-image-wrapper img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .report-heading {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #050505;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="report-heading">Report</h1>
+
+    <div class="container">
+        <div class="row m-auto">
+
+            <!-- Count cards here -->
+            <div class="col-4 count-card">
+                <h2>Attendees Count</h2>
+                <p id="at"></p>
+            </div>
+
+            <div class="col-4 count-card">
+                <h2>Events Count</h2>
+                <p id="event"></p>
+            </div>
+
+            <div class="col-4 count-card">
+                <h2>Registrations Count</h2>
+                <p id="reg"></p>
+            </div>
+
+            <div class="col-4 count-card">
+                <h2>Payments Count</h2>
+                <p id="pay"></p>
+            </div>
+
+            <div class="col-4 count-card">
+                <h2>Feedback Count</h2>
+                <p id="feed"></p>
+            </div>
+
+            <div class="col-4 count-card">
+                <h2>Venues Count</h2>
+                <p id="venues"></p>
+            </div>
+
+            <div class="col-4 count-card">
+                <h2>Organizers Count</h2>
+                <p id="org"></p>
+            </div>
+
+            <div class="col-4 count-card">
+                <h2>Event Categories Count</h2>
+                <p id="catg"></p>
+            </div>
+
+            <div class="col-4 count-card">
+                <h2>Sponsors Count</h2>
+                <p id="sponsors"></p>
+            </div>
+
+            <div class="col-4 count-card">
+                <h2>Staff Count</h2>
+                <p id="staff"></p>
+            </div>
+
+            <div class="col-4 count-card">
+                <h2>Tickets Count</h2>
+                <p id="tick"></p>
+            </div>
+
+            <div class="col-4 count-card">
+                <h2>Notifications Count</h2>
+                <p id="not"></p>
+            </div>
+
+            <div class="col-4 count-card">
+                <h2>Schedules Count</h2>
+                <p id="sched"></p>
+            </div>
+
+            <div class="col-4 count-card">
+                <h2>Users Count</h2>
+                <p id="users"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bottom Center Image -->
+    <div class="bottom-image-wrapper">
+        <img src="images/report.jpeg" alt="Report Image" />
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+    <script src="JS/report.js"></script>
+
+</body>
+
+</html>

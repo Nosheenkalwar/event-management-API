@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Feedback</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f0fdfa;
+      color: #374151;
+      font-family: Arial, sans-serif;
+      padding-top: 2rem;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #111827;
+      font-weight: bold;
+    }
+    th {
+      background-color: #e0f7f5;
+      color: #0f766e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="mb-4 text-center">Feedback</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle" id="feedbackTable">
+        <thead>
+          <tr>
+            <th>Feedback ID</th>
+            <th>Attendee ID</th>
+            <th>Event ID</th>
+            <th>Rating</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="JS/feedback.js"></script>
+</body>
+</html>
