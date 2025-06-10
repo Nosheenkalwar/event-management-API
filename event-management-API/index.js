@@ -568,7 +568,6 @@ app.get('/events-by-category', async (req, res) => {
   }
 });
 
-git 
 app.get('/payment-methods', async (req, res) => {
   try {
     const result = await pool.query(`
